@@ -1,17 +1,30 @@
-import Fruit from './Fruit.js';
+import {
+  LenovoComputerFactory,
+  HPComputerFactory
+} from './ConcreteComputerFactory.js';
 
-const FruitFactory = new Fruit();
 
-FruitFactory.createFruitFactory('apple', function(size) {
-  this.size = size;
-});
+function chooseBrand(brand){
+  let factory;
+  if (brand === 'Lenovo'){
+    factory = new LenovoComputerFactory();
+  }else{
+    factory = new HPComputerFactory();
+  }
+  return factory;
+}
 
-FruitFactory.createFruitFactory('pitch', function(color) {
-  this.color = color;
-});
+const hpFactory = chooseBrand('HP');
+const hpMouse = hpFactory.createMouse();
+const hpKeyboard = hpFactory.createKeyboard();
 
-const Apple = FruitFactory.getFruitFactory('apple');
-const Pitch = FruitFactory.getFruitFactory('pitch');
-let apple = new Apple(10);
-let pitch = new Pitch('red');
-console.log(apple, pitch);
+hpMouse.click();
+hpKeyboard.press();
+
+
+const lenovoFactory = chooseBrand('Lenovo');
+const lenovoMouse = lenovoFactory.createMouse();
+const lenovoKeyboard = lenovoFactory.createKeyboard();
+
+lenovoMouse.click();
+lenovoKeyboard.press();
