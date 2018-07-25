@@ -1,9 +1,18 @@
 import {
-  DevelopmentManager,
-  DesignerManager
-} from './Manager.js';
+  MouseFactory,
+  KeyboardFactory
+} from './Factory.js';
 
-const dev = new DevelopmentManager('Rose');
-const designer = new DesignerManager('Bob');
-console.log(dev.takeInterview('Daisy'));
-console.log(designer.takeInterview('Russel'));
+const mouseCreator = new MouseFactory();
+const keyboardCreator = new KeyboardFactory();
+
+const mouse = mouseCreator.create({
+  type: 'wheel'
+});
+const keyboard = keyboardCreator.create({
+  type: 'red'
+});
+
+
+console.log(mouse.click());
+console.log(keyboard.press());
