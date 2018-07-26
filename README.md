@@ -21,3 +21,5 @@ And the instances will be created in the concrete classes.
 **Summary in short** : `Factory method` abstract the creator class, the concrete instances are implemented in the concrete creator classes.
 
 
+## Abstract factory
+
