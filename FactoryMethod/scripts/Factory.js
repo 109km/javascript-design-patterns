@@ -10,8 +10,7 @@ import {
  */
 class ComputerFactory {
   create(){}
-  getType(){}
-}
+} 
 
 export class MouseFactory extends ComputerFactory {
   create(options) {

@@ -1,0 +1,33 @@
+@startuml
+
+class AbstractComputerFactory {
+  void createMouse()
+  void createKeyboard()
+}
+
+class AbstractMouse {
+  String brand
+  void click()
+}
+class AbstractKeyboard {
+  String brand
+  void press()
+}
+
+
+AbstractComputerFactory <|-- LenovoComputerFactory
+AbstractComputerFactory <|-- HPComputerFactory
+
+AbstractKeyboard <|-- LenovoKeyboard
+AbstractKeyboard <|-- HPKeyboard
+
+AbstractMouse <|-- LenovoMouse
+AbstractMouse <|-- HPMouse
+
+LenovoComputerFactory -- LenovoKeyboard : createKeyboard >
+LenovoComputerFactory -- LenovoMouse : createMouse >
+
+HPComputerFactory -- HPKeyboard : createKeyboard >
+HPComputerFactory -- HPMouse : createMouse >
+
+@enduml
