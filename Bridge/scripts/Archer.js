@@ -4,7 +4,4 @@ export default class Archer extends Enemy{
   constructor(armour){
     super(armour);
   }
-  addArmour(){
-    this.armour.addArmour();
-  }
 }
