@@ -14,7 +14,6 @@ export default class TeaShop {
     });
   }
   serve() {
-    console.log(this.orders);
     this.orders.forEach((order, index) => {
       console.log(`Serving tea to table#${index}, the order is ${order.getType()}`);
     });
