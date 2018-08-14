@@ -9,3 +9,4 @@ user1.join(room);
 user2.join(room);
 
 user1.send('hello!');
+user2.send('world');
