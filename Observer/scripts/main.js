@@ -1,5 +1,5 @@
 import Subscriber from './Subscriber.js';
-import Watcher from './Watcher.js';
+import Watcher from './watcher.js';
 
 const watcher = new Watcher();
 const ob1 = new Subscriber('ob1', (params) => {
