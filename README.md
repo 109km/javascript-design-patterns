@@ -84,3 +84,66 @@ It's like a puppet, you can control it with lines. The lines are like `proxy`, t
 
 **Summary** : `Proxy` is a class in the middle level, the user don't need to interact with the bottom class directly.
 
+
+# Behavioral Design Patterns
+
+## Chain of Responsibility
+
+It helps building a chain of objects. Request enters from one end and keeps going from object to object till it finds the suitable handler.
+
+**Summary** : `Chain of Responsibility` looks like pipes that are linked up, the water flows from one to another.
+
+## Command
+
+Allows you to encapsulate actions in objects. The key idea behind this pattern is to provide the means to decouple client from receiver.
+
+**Summary** : There are three main characters: receiver, invoker, command. The invoker just send the command, the receiver really reseponse the command.
+
+## Iterator
+
+In object-oriented programming, the iterator pattern is a design pattern in which an iterator is used to traverse a container and access the container's elements. The iterator pattern decouples algorithms from containers in some cases, algorithms are necessarily container-specific and thus cannot be decoupled.
+
+**Summary** : The user can visit each elements in the container.
+
+
+## Mediator
+
+Mediator pattern adds a third party object (called mediator) to control the interaction between two objects (called colleagues). It helps reduce the coupling between the classes communicating with each other. Because now they don't need to have the knowledge of each other's implementation.
+
+**Summary** : It's like when we are talking to someone on the phone, the phone is a `Mediator`. We can find mediators everywhere in real wolrd.
+
+## Memento
+
+The memento pattern is a software design pattern that provides the ability to restore an object to its previous state (undo via rollback).
+
+**Summary** : When we are editing a Word document, if we type something wrong, we can press `ctrl + z` to undo the current aciton, and go back to the previous state.
+
+## Observer
+
+Defines a dependency between objects so that whenever an object changes its state, all its dependents are notified.
+
+**Summary** : If you subscribe the daily news, you will receive the news every moring on your phone.
+
+## Visitor
+
+In object-oriented programming and software engineering, the visitor design pattern is a way of separating an algorithm from an object structure on which it operates. A practical result of this separation is the ability to add new operations to existing object structures without modifying those structures. It is one way to follow the open/closed principle.
+
+**Summary** : Imagine you can walk/jump/run, and one day you learned how to swim, we just modify the `actions`, no need to modify `you`.
+
+## Strategy
+
+In computer programming, the strategy pattern (also known as the policy pattern) is a behavioural software design pattern that enables an algorithm's behavior to be selected at runtime.
+
+**Summary** : Strategy pattern allows you to switch the algorithm or strategy based upon the situation.
+
+## State
+
+The state pattern is a behavioral software design pattern that implements a state machine in an object-oriented way. With the state pattern, a state machine is implemented by implementing each individual state as a derived class of the state pattern interface, and implementing state transitions by invoking methods defined by the pattern's superclass. The state pattern can be interpreted as a strategy pattern which is able to switch the current strategy through invocations of methods defined in the pattern's interface.
+
+**Summary** : It lets you change the behavior of a class when the state changes.
+
+## Template Method
+
+In software engineering, the template method pattern is a behavioral design pattern that defines the program skeleton of an algorithm in an operation, deferring some steps to subclasses. It lets one redefine certain steps of an algorithm without changing the algorithm's structure.
+
+**Summary** : If you want to build a house, the basic steps are always the same, so we define the steps together.
