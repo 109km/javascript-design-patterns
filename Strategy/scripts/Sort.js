@@ -30,7 +30,6 @@ const quickSort = arr => {
   return quickSort(left).concat([pivot], quickSort(right));
 }
 
-
 const sort = arr => {
   if (arr.length > 10) {
     console.log('using quick sort');
