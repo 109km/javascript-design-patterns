@@ -1,19 +1,27 @@
-import Subscriber from './Subscriber.js';
-import Watcher from './watcher.js';
+import Observer from './Observer.js';
+import Subject from './Subject.js';
 
-const watcher = new Watcher();
-const ob1 = new Subscriber('ob1', (params) => {
-  console.log(`This is ob1`,params);
+const sub = new Subject();
+const ob1 = new Observer('ob1', (params) => {
+  console.log(`This is ob1`, params);
 });
 
-const ob2 = new Subscriber('ob2', (params) => {
-  console.log(`This is ob2`,params);
+const ob2 = new Observer('ob2', (params) => {
+  console.log(`This is ob2`, params);
 });
 
-watcher.subscribe(ob1);
-watcher.subscribe(ob2);
+sub.subscribe(ob1);
+sub.subscribe(ob2);
 
+setTimeout(function() {
+  sub.notify({
+    name: 'Hello'
+  });
+}, 1000);
 
-watcher.publish({
-  name: 'Hello'
-});
+setTimeout(function() {
+  sub.remove('ob2');
+  sub.notify({
+    name: 'World'
+  });
+}, 2000);

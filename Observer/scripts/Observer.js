@@ -1,9 +1,9 @@
-export default class Subscriber {
+export default class Observer {
   constructor(key,callback) {
     this.key = key;
     this.callback = callback;
   }
-  notify(params){
+  update(params){
     this.callback(params);
   }
 }
