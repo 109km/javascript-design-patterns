@@ -124,6 +124,12 @@ Defines a dependency between objects so that whenever an object changes its stat
 
 **Summary** : If you subscribe the daily news, you will receive the news every moring on your phone.
 
+## Publisher and Subscriber
+
+It's different from  `Observer` pattern. In observer pattern, the observer and subject know each other. But in this pattern, the relation looks like `Publisher <--> Pub <--> Subscriber` , the pubslisher and subscriber don't interact directly. They communicate through `Pub` which is like a message center.
+
+**Summary** : You subscribe some wechat channels, the authors publish articles to the platform, and you receive the notices from the platform.
+
 ## Visitor
 
 In object-oriented programming and software engineering, the visitor design pattern is a way of separating an algorithm from an object structure on which it operates. A practical result of this separation is the ability to add new operations to existing object structures without modifying those structures. It is one way to follow the open/closed principle.
