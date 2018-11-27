@@ -6,6 +6,9 @@ class Publisher {
   notify(params) {
     this.pub.update(this.messageKey, params);
   }
+  asyncNotify(params, time) {
+    this.pub.asyncUpdate(this.messageKey, params, time);
+  }
 }
 
 export default Publisher;

@@ -25,6 +25,6 @@ publisherA.notify({
   temp: "20 ℃"
 });
 
-publisherB.notify({
+publisherB.asyncNotify({
   title: "Breaking news"
-});
+},2000);
