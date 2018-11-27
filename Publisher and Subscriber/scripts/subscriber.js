@@ -2,7 +2,7 @@ class Subscriber {
   constructor(name, pub) {
     this.name = name;
     this.pub = pub;
-    this.pool = {};
+    this.pool = {}; // Store the messages that this subscriber has subscribed
   }
   addToPub() {
     this.pub.addSubscriber(this);
