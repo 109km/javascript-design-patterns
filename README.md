@@ -122,7 +122,7 @@ The memento pattern is a software design pattern that provides the ability to re
 
 Defines a dependency between objects so that whenever an object changes its state, all its dependents are notified.
 
-**Summary** : If you subscribe the daily news, you will receive the news every moring on your phone.
+**Summary** : You tell your friend if he/she is going to swim, call you. You two communicate with each other directly.
 
 ## Publisher and Subscriber
 
