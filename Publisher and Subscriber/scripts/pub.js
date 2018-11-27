@@ -11,11 +11,10 @@ class Pub {
     }
   }
   update(messageKey, params) {
-    console.log(this);
-    this.publish.call(this, messageKey, params);
+    this.publish( messageKey, params);
   }
   asyncUpdate(messageKey, params, time) {
-    this.asyncPublish.call(this, messageKey, params, time);
+    this.asyncPublish(messageKey, params, time);
   }
   publish(messageKey, params) {
     for (let k in this.messages[messageKey]) {

@@ -4,13 +4,14 @@ import Publisher from './publisher.js';
 
 const pub = new Pub();
 
-const subscriberA = new Subscriber('May', pub);
-const subscriberB = new Subscriber('Hey', pub);
+const subscriberA = new Subscriber('A', pub);
+const subscriberB = new Subscriber('B', pub);
 
 subscriberA.subscribe('weather', function(params) {
   console.log(`subscriberA gets the weather: ${params.temp}`);
 });
 subscriberA.subscribe('news', function(params) {
+  console.log(this);
   console.log(`subscriberA gets the news: ${params.title}`);
 });
 
