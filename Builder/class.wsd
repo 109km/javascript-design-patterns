@@ -1,0 +1,42 @@
+@startuml
+
+class AbstractBuilder {
+  - meal:Meal
+
+  + setDrink(String):void
+  + setBurger(String):void
+
+  + getMeal():Meal
+  + setMeal(meal:Meal):void
+}
+
+class DrinkBuilder{
+  + setDrink(String):void
+}
+
+class BurgerBuilder{
+  + setBurger(String):void
+}
+
+class Director {
+  - drinkBuilder:ConcreteBuilder
+  - burgerBuilder:ConcreteBuilder
+
+  + setBuilder(type, builder:ConcreteBuilder): void
+  + construct(string):Meal
+}
+class Meal {
+  - drink:String
+  - burger:String
+  + setDrink(String):void
+  + setBurger(String):void
+}
+
+
+AbstractBuilder <|.. DrinkBuilder
+AbstractBuilder <|.. BurgerBuilder
+
+Director o-- AbstractBuilder
+AbstractBuilder *-- Meal
+
+@enduml
